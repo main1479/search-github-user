@@ -17,7 +17,7 @@ const Navbar = () => {
 				</>
 			)}
 			{isUser ? (
-				<button className="logout" onClick={logout}>
+				<button className="logout" onClick={() => logout({ returnTo: window.location.origin })}>
 					Logout
 				</button>
 			) : (
